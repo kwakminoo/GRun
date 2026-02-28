@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./views/Home";
 import {
   IntroPage,
   JoinPage,
@@ -7,7 +7,7 @@ import {
   GearPage,
   AppRecommendPage,
   CoursePage,
-} from "./pages/why-we-run";
+} from "./features/why-we-run";
 
 export default function App() {
   return (
