@@ -247,8 +247,8 @@ function CalendarSection() {
     <section id="calendar" className="min-h-[100vh] w-full flex flex-col bg-white">
       <div className="container mx-auto px-6 md:px-12 flex-1 flex flex-col justify-center py-6 md:py-8">
         <h2 className={`${SECTION_TITLE_CLASS} mb-4 md:mb-6 text-2xl md:text-3xl`}>캘린더</h2>
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-start justify-center max-w-7xl mx-auto">
-          <div className="w-full lg:flex-1 lg:max-w-[840px] flex flex-col bg-white rounded-2xl shadow-xl border border-neutral-200 overflow-hidden">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-stretch justify-center max-w-7xl mx-auto">
+          <div className="w-full lg:flex-1 lg:max-w-[840px] flex flex-col bg-white rounded-2xl shadow-xl border border-neutral-200 overflow-hidden shrink-0">
             <div className="flex items-center justify-between p-6 md:p-9 bg-neutral-50 border-b border-neutral-200 shrink-0">
               <button
                 type="button"
@@ -280,17 +280,17 @@ function CalendarSection() {
                 →
               </button>
             </div>
-            <div className="p-4 md:p-6 flex-1 flex flex-col min-h-0">
+            <div className="p-6 md:p-9 flex-1 flex flex-col min-h-0">
               <table className="w-full border-collapse table-fixed flex-1">
                 <thead>
-                  <tr className="text-neutral-600 font-semibold text-sm md:text-base">
-                    <th className="border border-neutral-300 bg-neutral-100 py-2">일</th>
-                    <th className="border border-neutral-300 bg-neutral-100 py-2">월</th>
-                    <th className="border border-neutral-300 bg-neutral-100 py-2">화</th>
-                    <th className="border border-neutral-300 bg-neutral-100 py-2">수</th>
-                    <th className="border border-neutral-300 bg-neutral-100 py-2">목</th>
-                    <th className="border border-neutral-300 bg-neutral-100 py-2">금</th>
-                    <th className="border border-neutral-300 bg-neutral-100 py-2">토</th>
+                  <tr className="text-neutral-600 font-semibold text-base md:text-lg">
+                    <th className="border border-neutral-300 bg-neutral-100 py-3">일</th>
+                    <th className="border border-neutral-300 bg-neutral-100 py-3">월</th>
+                    <th className="border border-neutral-300 bg-neutral-100 py-3">화</th>
+                    <th className="border border-neutral-300 bg-neutral-100 py-3">수</th>
+                    <th className="border border-neutral-300 bg-neutral-100 py-3">목</th>
+                    <th className="border border-neutral-300 bg-neutral-100 py-3">금</th>
+                    <th className="border border-neutral-300 bg-neutral-100 py-3">토</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -307,8 +307,8 @@ function CalendarSection() {
                               : `bg-white text-neutral-800 ${j === 0 ? "text-red-600" : ""} ${j === 6 ? "text-blue-600" : ""}`
                           }`}
                           style={{
-                            height: "5.25rem",
-                            minHeight: "5.25rem",
+                            height: "6.5rem",
+                            minHeight: "6.5rem",
                           }}
                         >
                           {d !== 0 ? (
@@ -324,13 +324,13 @@ function CalendarSection() {
               </table>
             </div>
           </div>
-          <div className="w-full lg:w-[33rem] flex flex-col gap-3 lg:max-h-[780px]">
+          <div className="w-full lg:w-[16.5rem] flex flex-col gap-3 min-h-0">
             {RUNNING_COURSES.map((course) => (
               <div
                 key={course.key}
-                className="flex-none flex flex-col rounded-xl overflow-hidden shadow-lg bg-white border border-neutral-200"
+                className="flex-1 min-h-0 flex flex-col rounded-xl overflow-hidden shadow-lg bg-white border border-neutral-200"
               >
-                <div className="h-36 overflow-hidden">
+                <div className="flex-1 min-h-0 min-h-[4.5rem] overflow-hidden">
                   <img
                     src={course.img}
                     alt={course.name}
