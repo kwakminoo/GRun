@@ -27,5 +27,10 @@ npm-debug.log*
 # Vercel
 .vercel
 
+# Babel (Next.js uses SWC; .babelrc would require @babel/runtime)
+.babelrc
+.babelrc.js
+.babelrc.json
+
 # TypeScript
 *.tsbuildinfo
